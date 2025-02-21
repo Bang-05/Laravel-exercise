@@ -15,7 +15,7 @@ class signupController extends Controller
         return view('signup');
     }
     public function displayInfor (signupRequest $Request){ 
-        $userSession = session('usersession', []);
+        $userSession = session('userSession', []);
         $user = [
             'name' => $name = $Request -> input("name"),
             'age' => $age = $Request -> input("age"),
@@ -28,7 +28,7 @@ class signupController extends Controller
         $userSession[] = $user;
 
         session(['userSession' => $userSession]);
-        return view('signup') -> with ('userSesion', $userSession);
+        return view('signup') -> with ('userSession', $userSession);
     }
     public function clear() {
         Session::forget('userSession');
