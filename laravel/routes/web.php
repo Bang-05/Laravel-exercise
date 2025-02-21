@@ -20,7 +20,7 @@ Route::group(['prefix' => 'tutorial'], function() {
     });
 });
  
-Route::resource('/post', postController::class);
+// Route::resource('/post', postController::class);
 Route::get('/signup', [signupController::class, 'index']);
 Route::post('/signup', [signupController::class, 'displayInfor']);
 Route::get('/api', [apiController::class, 'getData']);

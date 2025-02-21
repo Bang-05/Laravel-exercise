@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Http;
 class apiController extends Controller
 {
     public function getData() {
-        $reponse = Http::get('http://api.com/summary');
+        $reponse = Http::get('https://jsonplaceholder.typicode.com/posts');
         $data = $reponse -> json();
         return view('index') -> with('data', $data);
     }

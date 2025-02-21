@@ -13,4 +13,8 @@ class sumAController extends Controller
         $sum = $num1 + $num2;
         return view("sum", ['sum'=> $sum]);
     }
+
+    public function form() {
+        return view('form1');
+    }
 }
