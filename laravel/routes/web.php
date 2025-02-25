@@ -4,6 +4,7 @@ use App\Http\Controllers\apiController;
 // use App\Http\Controllers\postController;
 use App\Http\Controllers\signupController;
 use App\Http\Controllers\sumAController;
+use App\Http\Controllers\PageController;
 
 use App\Http\Controllers\ProductController;	
 use Illuminate\Support\Facades\Route;
@@ -27,4 +28,6 @@ Route::get('/signup', [signupController::class, 'index']);
 Route::post('/signup', [signupController::class, 'displayInfor']);
 Route::get('/api', [apiController::class, 'getData']);
 
-Route::resource('products', ProductController::class);		
+Route::resource('products', ProductController::class);	
+
+Route::get('index', [PageController::class, 'getIndex']) -> name('trang-chu');
