@@ -31,3 +31,5 @@ Route::get('/api', [apiController::class, 'getData']);
 Route::resource('products', ProductController::class);	
 
 Route::get('index', [PageController::class, 'getIndex']) -> name('trang-chu');
+
+Route::get('trangchu', [PageController::class, 'index']);
