@@ -32,4 +32,4 @@ Route::resource('products', ProductController::class);
 
 Route::get('index', [PageController::class, 'getIndex']) -> name('trang-chu');
 
-Route::get('trangchu', [PageController::class, 'index']);
+Route::get('shopper', [PageController::class, 'index']);
