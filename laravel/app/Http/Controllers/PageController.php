@@ -10,6 +10,6 @@ class PageController extends Controller
         return view ('master');
     }
     public function index() {
-        return view ('master-1');
+        return view ('pages.trangchu-1');
     }
 }
