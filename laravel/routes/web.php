@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\apiController;
 // use App\Http\Controllers\postController;
 use App\Http\Controllers\signupController;
 use App\Http\Controllers\sumAController;
 use App\Http\Controllers\PageController;
-
 use App\Http\Controllers\ProductController;	
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CreateTable;
 
 Route::get('/', function () {
     return view('sum');
@@ -33,3 +34,5 @@ Route::resource('products', ProductController::class);
 Route::get('index', [PageController::class, 'getIndex']) -> name('trang-chu');
 
 Route::get('shopper', [PageController::class, 'index']);
+
+Route::get('banhang', [CreateTable::class, 'table']);
