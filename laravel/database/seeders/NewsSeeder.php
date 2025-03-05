@@ -4,15 +4,15 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Products;
+use App\Models\News;
 
-class ProductsSeeder extends Seeder
+class NewsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Products::factory(count:20)->create();
+        News::factory(count:20)->create();
     }
 }
