@@ -11,8 +11,8 @@ class CreateTable extends Controller
         if(!Schema::hasTable('addresses')) {
             Schema::create('addresses', function($table) {
                 $table -> increments('id');
-                $table->string('street', 255)->nullable()->collation('utf8_unicode_ci');
-                $table->string('country', 255)->collation('utf8_unicode_ci');
+                $table->string('street', 255)->nullable();
+                $table->string('country', 255);
                 $table->integer('icon_id')->nullable();
                 $table->integer('monster_id');
                 $table->timestamps();
@@ -22,11 +22,11 @@ class CreateTable extends Controller
             Schema::create('articles', function($table) {
                 $table -> increments('id');
                 $table->unsignedInteger('category_id');
-                $table->string('title', 255)->collation('utf8_unicode_ci');
-                $table->string('slug', 255)->default('')->collation('utf8_unicode_ci');
-                $table->text('content')->collation('utf8_unicode_ci');
-                $table->string('image', 255)->nullable()->collation('utf8_unicode_ci');
-                $table->enum('status', ['PUBLISHED', 'DRAFT'])->default('PUBLISHED')->collation('utf8_unicode_ci');
+                $table->string('title', 255);
+                $table->string('slug', 255)->default('');
+                $table->text('content');
+                $table->string('image', 255)->nullable();
+                $table->enum('status', ['PUBLISHED', 'DRAFT'])->default('PUBLISHED');
                 $table->date('date');
                 $table->tinyInteger('featured')->default(0);
                 $table->timestamps();
