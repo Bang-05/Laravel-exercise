@@ -13,7 +13,7 @@
     <link href="eshopper/css/animate.css" rel="stylesheet">
 	<link href="eshopper/css/main.css" rel="stylesheet">
 	<link href="eshopper/css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+    <!-- [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
@@ -26,8 +26,8 @@
 
 <body>
 	@include('header-1');
-    @yield('slider');
-    @yield('content');
+    @yield('slider-1');
+    @yield('content-1');
     @include('footer-1');
     @include('script-1');
 	

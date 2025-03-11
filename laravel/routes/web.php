@@ -31,8 +31,8 @@ Route::get('/api', [apiController::class, 'getData']);
 
 Route::resource('products', ProductController::class);	
 
-Route::get('index', [PageController::class, 'getIndex']) -> name('trang-chu');
-
 Route::get('shopper', [PageController::class, 'index']);
 
 Route::get('banhang', [CreateTable::class, 'table']);
+
+Route::get('index', [PageController::class, 'getSlide']) -> name('trang-chu');

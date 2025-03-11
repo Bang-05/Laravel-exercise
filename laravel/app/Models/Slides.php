@@ -7,6 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Slides extends Model
 {
-    /** @use HasFactory<\Database\Factories\SlidesFactory> */
-    use HasFactory;
+    protected $table = "slides";
 }
