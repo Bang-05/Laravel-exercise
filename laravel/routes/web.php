@@ -36,3 +36,4 @@ Route::get('shopper', [PageController::class, 'index']);
 Route::get('banhang', [CreateTable::class, 'table']);
 
 Route::get('index', [PageController::class, 'getSlide']) -> name('trang-chu');
+Route::get('/type/{id}', [PageController::class, 'getLoaiSp']);							

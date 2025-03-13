@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class TypeProducts extends Model
 {
-    /** @use HasFactory<\Database\Factories\TypeProductsFactory> */
     use HasFactory;
+
+    protected $table = 'type_products';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'name', 'description', 'image', 'created_at', 'updated_at'
+    ];
+
+    public function products()
+    {
+        return $this->hasMany(Products::class, 'id_type','id');
+    }
 }

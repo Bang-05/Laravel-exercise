@@ -7,6 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bills extends Model
 {
-    /** @use HasFactory<\Database\Factories\BillsFactory> */
     use HasFactory;
+
+    protected $table = 'bills';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'id_customer', 'date_order', 'total', 'payment', 'note', 'created_at', 'updated_at'
+    ];
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class,'id_customer','id');
+    }
+
+    public function billDetails()
+    {
+        return $this->hasMany(BillDetails::class,'id_bill','id');
+    }
 }

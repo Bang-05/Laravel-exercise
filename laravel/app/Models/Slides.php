@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Slides extends Model
 {
-    protected $table = "slides";
+    use HasFactory;
+    protected $table = 'slides';
+    // protected $primaryKey = 'id';
+    protected $fillable = ['link', 'image'];
+
 }
